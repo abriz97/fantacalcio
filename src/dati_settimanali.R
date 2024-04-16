@@ -14,8 +14,7 @@ here::i_am('src/dati_settimanali.R')
 gitdir <- here::here()
 gitdir.data <- file.path(gitdir, 'data')
 source(file.path(gitdir, "R/paths.R"))
-load_palette()
-
+tmp <- load_palette()
 
 path_colors <- file.path(gitdir.data, "seriea_colors.yaml")
 dplayers <- read_players(file.path(gitdir.data, "giocatori_fantacalcio.csv"))
@@ -64,7 +63,7 @@ dvoti <- lapply(1:38, estrai_voti_giornata) |>
 cols <- c('voto', 'fantavoto')
 dvoti[, (cols) := lapply(
     .SD, function(x) sub(',', '.', x) |> as.numeric() ),
-    .SDcols=cols]
+    .SDcols=cols ]
 # solve voti such as 55, 65
 dvoti[ voto > 50, voto := voto / 10]
 dvoti[ fantavoto > 50, fantavoto := fantavoto / 10]
@@ -82,10 +81,12 @@ dplot <- merge(dplot, dplayers, by.x='nome', by.y='Player', all.x=TRUE)
 dplot[is.na(Team), Team := "Inter"]
 
 
+# TO FIX!
 pd <- position_dodge(0.4)
-ggplot(dplot, aes(x=giornata, y=fantavoto, group=nome, color=Team, fill=Team)) + 
+dplot[, nome2 := substr(nome,1,2)]
+p <- ggplot(dplot, aes(x=giornata, y=fantavoto, group=nome, color=Team, fill=Team)) + 
     geom_point(position=pd) +
-    geom_labelpath(aes(label=nome), hjust=1, alpha=.4, position=pd) +
+    geom_labelpath(aes(label=nome2), hjust=1, alpha=.4, position=pd) +
     # geom_text() +
     facet_grid( ruolo ~ ., labeller=labeller(ruolo=dict_roles) ) +
     scale_fill_manual(values = palette_colors1) +
@@ -93,7 +94,6 @@ ggplot(dplot, aes(x=giornata, y=fantavoto, group=nome, color=Team, fill=Team)) +
     theme_minimal()  +
     theme(legend.position='none') 
 
-# ggplot(dvoti, aes(x = giornata, y=fantavoto)) + 
-#     geom_label_player(repel=FALSE) +
-#     theme_minimal() + 
-#     NULL
+filename <- file.path(gitdir, "dati_settimanali.pdf")
+ggsave(plot=p, filename, units="cm", height=18, width=12)
+paste("zathura", filename) |> system()

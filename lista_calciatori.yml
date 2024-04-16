@@ -1,0 +1,79 @@
+# Portieri
+Musso:
+  squadra: Ata
+  ruolo: portiere
+Radunovic:
+  squadra: Bol
+  ruolo: portiere
+Carnesecchi:
+  squadra: Ata
+  ruolo: portiere
+# Difensori
+De Vrij:
+  squadra: Int
+  ruolo: difensore
+Gatti:
+  squadra: Juv
+  ruolo: difensore
+Alex Sandro:
+  squadra: Juv
+  ruolo: difensore
+Martinez Quarta:
+  squadra: Juv
+  ruolo: difensore
+Bastoni:
+  squadra: Int
+  ruolo: difensore
+Toljan:
+  squadra: Sas
+  ruolo: difensore
+Dawidowicz:
+  squadra: Ver
+  ruolo: difensore
+Thiaw:
+  squadra: Mil
+  ruolo: difensore
+# Centrocampisti
+Oudin:
+  squadra: Lec
+  ruolo: centrocampista
+Paredes:
+  squadra: Rom
+  ruolo: centrocampista
+Cristante:
+  squadra: Rom
+  ruolo: centrocampista
+Pasalic:
+  squadra: Ata
+  ruolo: centrocampista
+Pulisic:
+  squadra: Mil
+  ruolo: centrocampista
+Pessina:
+  squadra: Mon
+  ruolo: centrocampista
+Klaassen:
+  squadra: Int
+  ruolo: centrocampista
+Duncan:
+  squadra: Fio
+  ruolo: centrocampista
+# attaccanti
+Sanabria:
+  squadra: Tor
+  ruolo: attaccante
+Berardi:
+  squadra: Sas
+  ruolo: attaccante
+Lucca:
+  squadra: Udi
+  ruolo: attaccante
+Yildiz:
+  squadra: Juv
+  ruolo: attaccante
+Henry:
+  squadra: Ver
+  ruolo: attaccante
+Nzola:
+  squadra: Fio
+  ruolo: attaccante

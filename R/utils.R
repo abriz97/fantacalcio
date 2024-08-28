@@ -319,7 +319,7 @@ scarica_probabilita_titolari <- function(giocatori=giocatori_dt){
 
 estrai_voti_giornata <- function(giornata){
     url_voti_giornata <- sprintf("%s/2023-24/%s", urls$voti, giornata )
-    html <- read_html(urls_voti_giornata)
+    html <- read_html(url_voti_giornata)
     out <- list(
         nome = html_elements(html, '.player-name') |> html_text2(),
         ruolo = html_elements(html, '.role') |> html_attr('data-value'),

@@ -14,6 +14,7 @@ The repository is structured as follows:
 Which packages are required to run the code? 
 Provide installation script, possibly through `venv`. At the same time this is just a small project and there are very few dependencies so this is not crucial.
 
+To get probability of your players playing, update the `lista_calciatori.yml` file with your players.
 
 
 ## Folders
@@ -29,4 +30,6 @@ For example, I wrote:
 - `dati_settimanali.R` is to be run prior to every game to offer an overview of your choices with their probability of playing, their opponents and ...
 
 ### data
+
+- `giocatori_fantacalcio.csv` reports all the players in the fantacalcio (not updated after january session).
 

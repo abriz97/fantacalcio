@@ -70,8 +70,3 @@ if "Giocatore" == data.columns[0]:
 
 # Check no weird teams
 data.value_counts("Squadra")
-
-data
-
-
-

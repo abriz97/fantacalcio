@@ -46,4 +46,4 @@ parsed = list(map(parse_row, tr_elements))
 data = pd.concat(parsed, ignore_index=True)
 data.columns = data.loc[0]
 data.drop(0, inplace=True)
-data.to_csv('price_fanta.csv')
+data.to_csv('data/price_fanta.csv')

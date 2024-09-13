@@ -1,79 +1,80 @@
 # Portieri
-Musso:
-  squadra: Ata
-  ruolo: portiere
-Radunovic:
-  squadra: Bol
-  ruolo: portiere
-Carnesecchi:
-  squadra: Ata
-  ruolo: portiere
-# Difensori
-De Vrij:
-  squadra: Int
-  ruolo: difensore
-Gatti:
-  squadra: Juv
-  ruolo: difensore
-Alex Sandro:
-  squadra: Juv
-  ruolo: difensore
-Martinez Quarta:
-  squadra: Juv
-  ruolo: difensore
-Bastoni:
-  squadra: Int
-  ruolo: difensore
-Toljan:
-  squadra: Sas
-  ruolo: difensore
-Dawidowicz:
-  squadra: Ver
-  ruolo: difensore
-Thiaw:
-  squadra: Mil
-  ruolo: difensore
+Falcone:
+    squadra: Lec
+    ruolo:  portiere
+Gollini:
+    squadra: Gen
+    ruolo:  portiere
+Perin:
+    squadra: Juv
+    ruolo:  portiere
+
+# Difensori	
+Cambiaso:
+    squadra: Juv
+    ruolo: difensore
+Dodo':
+    squadra: Fio
+    ruolo: difensore
+Rrahmani:
+    squadra: Nap
+    ruolo: difensore
+Romagnoli:
+    squadra: Laz
+    ruolo: difensore
+Pavard:
+    squadra: Int
+    ruolo: difensore
+Circati:
+    squadra: Par
+    ruolo: difensore
+Varane:
+    squadra: Com
+    ruolo: difensore
+Idzes:
+    squadra: Ven
+    ruolo: difensore
 # Centrocampisti
-Oudin:
-  squadra: Lec
-  ruolo: centrocampista
-Paredes:
-  squadra: Rom
-  ruolo: centrocampista
-Cristante:
-  squadra: Rom
-  ruolo: centrocampista
-Pasalic:
-  squadra: Ata
-  ruolo: centrocampista
-Pulisic:
-  squadra: Mil
-  ruolo: centrocampista
-Pessina:
-  squadra: Mon
-  ruolo: centrocampista
-Klaassen:
-  squadra: Int
-  ruolo: centrocampista
-Duncan:
-  squadra: Fio
-  ruolo: centrocampista
-# attaccanti
-Sanabria:
-  squadra: Tor
-  ruolo: attaccante
-Berardi:
-  squadra: Sas
-  ruolo: attaccante
-Lucca:
-  squadra: Udi
-  ruolo: attaccante
-Yildiz:
-  squadra: Juv
-  ruolo: attaccante
-Henry:
-  squadra: Ver
-  ruolo: attaccante
-Nzola:
-  squadra: Fio
-  ruolo: attaccante
+Pellegrini Lo.:
+    squadra: Rom
+    ruolo: centrocampista
+Strefezza:
+    squadra: Com
+    ruolo: centrocampista
+Fazzini:
+    squadra: Emp
+    ruolo: centrocampista
+Tchaouna:
+    squadra: Laz
+    ruolo: centrocampista
+Ricci S.:
+    squadra: Tor
+    ruolo: centrocampista
+Lovric:
+    squadra: Udi
+    ruolo: centrocampista
+Ekkelenkamp:
+    squadra: Udi
+    ruolo: centrocampista
+Zaniolo:
+    squadra: Ata
+    ruolo: centrocampista
+# Attaccanti	
+Martinez L.:
+    squadra: Int
+    ruolo: attaccante
+Gudmundsson A.:
+    squadra: Fio
+    ruolo: attaccante
+Dallinga:
+    squadra: Bol
+    ruolo: attaccante
+Beltran L.:
+    squadra: Fio
+    ruolo: attaccante
+Rebic:
+    squadra: Lec
+    ruolo: attaccante
+Mota:
+    squadra: Mon
+    ruolo: attaccante

@@ -1,35 +1,42 @@
 # Fantacalcio
 
 Welcome to the repository, here you can find the scripts necessary to make sure you won't lose any more at Fantacalcio.
-
 The repository is structured as follows:
-
-- Usage
-- Folders
-	- [R](#R)
-	- [src](#src)
-
-## Usage
-
-Which packages are required to run the code? 
-Provide installation script, possibly through `venv`. At the same time this is just a small project and there are very few dependencies so this is not crucial.
-
-To get probability of your players playing, update the `lista_calciatori.yml` file with your players.
+... 
 
 
-## Folders
+## Preparation for the auction
 
-### R
+Let us restart. 
 
-### src
+There are two main tasks, and associated data:
 
-The folder contains scripts to scrape data from online websites, or to analyse data.
-For example, I wrote: 
-- `scrape_colors.py` to obtain `data/seriea_colors.yaml`
-- `scrape_data.py` to obtain `data/expectedgoals2223.csv`
-- `dati_settimanali.R` is to be run prior to every game to offer an overview of your choices with their probability of playing, their opponents and ...
+1. Who can we buy? 	-> database
+2. Who to buy ? 	-> past and predicted future performances
 
-### data
+The resources used here can both be downloaded from [fantacalcio.it](https://www.fantacalcio.it/quotazioni-fantacalcio)
 
-- `giocatori_fantacalcio.csv` reports all the players in the fantacalcio (not updated after january session).
+1. `data/Quotazioni_Fantacalcio_Stagione_2024_2025.xlsx`.
+2. `data/Statistiche_Fantacalcio_Stagione_2024_2025.xslx`.
 
+It is of course harder to predict future performances, and to value players.
+We will try to use a tool already developed (even though I have not had the chance to test it).
+For this task, we will scrape the data from [fantacalcio-online](https://www.fantacalcio-online.com/it/asta-fantacalcio-stima-prezzi), with outputs in:
+
+3. `data/Valutazioni_FantacalcioOnline_Stagione_2024_2025.csv`
+
+Code for this can be found at `src/scrape_value_player.py`, which was inspired from `giovanni.davoli`.
+
+
+## The auction
+
+The main tool of the auction is a streamlit app coded up in `src/auction.py`.
+Run this with:
+
+```{zsh run-app}
+streamlit run src/auction.py
+```
+
+Explain what it is.
+
+## Week to week updates

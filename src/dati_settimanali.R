@@ -1,7 +1,7 @@
 #!/bin/Rscript
 
 # Scarica le probabilita di titolarita per ogni calciatore da 
-# https://www.fantacalcio.it/probabili-formazioni-serie-a
+print( "https://www.fantacalcio.it/probabili-formazioni-serie-a" )
 
 suppressPackageStartupMessages({
     library(data.table)

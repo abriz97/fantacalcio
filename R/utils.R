@@ -308,11 +308,19 @@ scarica_probabilita_titolari <- function(giocatori=giocatori_dt){
 
     # print probabilities
     .g <- function(x) setorder(x, -prob) |> print() 
+    out[, TMP := fcase(
+        ruolo == "portiere", 0,
+        ruolo == "difensore", 1,
+        ruolo == "centrocampista", 2,
+        ruolo == "attaccante", 3
+    )]
+    setkey(out, TMP)
     out[, {
-        sprintf("--- %s ---\n", ruolo) |> cat()
+        sprintf("--- %s ---\n", unique(ruolo)) |> cat()
         .g(.SD);
         cat('\n')
-    } , by='ruolo']
+    } , by='TMP', .SDcols = c('nome', 'prob', 'squadra', 'avversaria', 'in_casa')]
+    out[, TMP := NULL]
 
     return(out)
 }
